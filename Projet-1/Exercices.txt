@@ -1,0 +1,15 @@
+Exercice 1:
+Écrire une fonction qui transforme un tableau d'objets en un objet où chaque clé est l'id de l'objet et la valeur est l'objet lui-même.
+
+Exercice 2:
+Écrire une fonction qui attend 1 seconde, puis renvoie "Hello World".
+
+Exercice 3:
+Écrire une fonction qui renvoie le n-ième nombre de Fibonacci.
+
+Exercice 4:
+Écrire une fonction qui renvoie le nombre d'occurrences de chaque mot dans une chaîne de caractères et les utilise pour créer un nouveau si il y a plus de 3 occurrences dans un mot.
+
+
+Note: A REMETTRE CHAQUE EXERCICE DANS SON PROPPRE FICHIER
+AVANT SAMEDI A 10H MONTREAL

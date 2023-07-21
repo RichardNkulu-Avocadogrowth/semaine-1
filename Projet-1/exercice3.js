@@ -1,4 +1,4 @@
-function fibonacci(n) {
+const fibonacci = (n) => {
     if (n < 0) {
       throw new Error('Le nombre n doit être supérieur ou égal à zéro.');
     }

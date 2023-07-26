@@ -2,8 +2,13 @@
 
 
 /* let myArray = [1, 2, "string", true, undefined, { nom: "Pierre", age: 31}]
-const myArrayIndexOf = myArray.find(el => el === "string");
-console.log(myArrayIndexOf) */
+console.log('arrayBefore ', myArray)
+const shiftedElement = myArray.shift();
+console.log('arrayAfter ', myArray)
+console.log('shiftedElement ',shiftedElement)
+
+myArray.unshift(0);
+console.log('arrayAfterUnshift ', myArray) */
 
 class Node {
     constructor(value) {
@@ -53,6 +58,23 @@ class LinkedList {
         console.log("temp ", temp);
         return temp;
     }
+
+    shift() {
+        if (!this.head) {
+            return undefined;
+        }
+
+        const removedNode = this.head;
+        removedNode.next = null;
+        this.head = this.head.next;
+        this.length--;
+
+        /* if (this.length === 0) {
+            this.tail = null
+        } */
+
+        return removedNode.value
+    }
     
 }
 
@@ -66,9 +88,12 @@ myLinkedList.push(6);
 myLinkedList.pop(6);
 
 
-// myLinkedList.push(2);
-// myLinkedList.push(3);
+myLinkedList.push(2);
+myLinkedList.push(3);
 
-// myLinkedList.pop(3)
+myLinkedList.pop(3)
 console.log('afterPush', myLinkedList)
+
+myLinkedList.shift();
+console.log('AfterShift ', myLinkedList)
 

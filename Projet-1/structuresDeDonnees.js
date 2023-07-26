@@ -9,7 +9,6 @@ class Node {
     constructor(value) {
         this.value = value;
         this.next = null;
-        this.prev = null;
     }
 }
 
@@ -18,7 +17,7 @@ class LinkedList {
         const newNode = new Node(value);
         this.head = newNode;
         this.tail = this.head;
-        this.length = 1;
+        this.length = 0;
     }
     // Big O Notation : O(1)
     push(value){
@@ -28,7 +27,6 @@ class LinkedList {
             this.tail = this.head;
         } else {
             this.tail.next = newNode;
-            /* newNode.prev = this.tail; */
             this.tail = newNode
         }
         this.length++
@@ -59,11 +57,18 @@ class LinkedList {
 }
 
 let myLinkedList = new LinkedList(0);
-console.log(myLinkedList)
+console.log('beforePush', myLinkedList)
 
 myLinkedList.push(1);
 myLinkedList.push(2);
-myLinkedList.push(3);
+myLinkedList.push(4);
+myLinkedList.push(6);
+myLinkedList.pop(6);
 
-myLinkedList.pop(3)
-console.log(myLinkedList)
+
+// myLinkedList.push(2);
+// myLinkedList.push(3);
+
+// myLinkedList.pop(3)
+console.log('afterPush', myLinkedList)
+

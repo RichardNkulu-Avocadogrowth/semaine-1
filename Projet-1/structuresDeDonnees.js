@@ -17,83 +17,72 @@ class Node {
     }
 }
 
+//----------------- This is the Linked list Data Structure --------------------------
 class LinkedList {
-    constructor(value) {
-        const newNode = new Node(value);
-        this.head = newNode;
-        this.tail = this.head;
-        this.length = 0;
+    constructor(value){
+        const newNode = new Node(value)
+        this.head = newNode
+        this.tail = this.head
+        this.length = 1
     }
-    // Big O Notation : O(1)
+    //O(1)
     push(value){
-        const newNode = new Node(value);
-        if (!this.head) {
-            this.head = newNode;
-            this.tail = this.head;
+        const newNode = new Node(value)
+        if(!this.head){
+            this.head = newNode
+            this.tail = newNode
         } else {
-            this.tail.next = newNode;
+            this.tail.next = newNode
             this.tail = newNode
         }
         this.length++
-        return this;
+        return this
     }
-
-    // Big O Notation : O(n)
-    pop() {
-        if (!this.head) return undefined;
-        let temp = this.head;
-        let prev = this.head;
-        while (temp.next) {
-            prev = temp;
-            temp = temp.next;
+    //O(n)
+    pop(){
+        if(!this.head) return undefined
+        let temp = this.head
+        let pre = this.head
+        while(temp.next){
+            pre = temp
+            temp = temp.next
         }
-        this.tail = prev;
-        this.tail.next = null;
-        this.length--;
-
-        if (this.length === 0) {
-            this.head = null;
-            this.tail = null;
-        }
-        console.log("temp ", temp);
-        return temp;
-    }
-
-    shift() {
-        if (!this.head) {
-            return undefined;
-        }
-
-        const removedNode = this.head;
-        removedNode.next = null;
-        this.head = this.head.next;
-        this.length--;
-
-        /* if (this.length === 0) {
+        this.tail = pre
+        this.tail.next = null
+        this.length--
+        if(this.length === 0){
+            this.head = null
             this.tail = null
-        } */
-
-        return removedNode.value
+        }
+        return temp
     }
-    
+
+
+    //O(1)
+    shift(){
+        if(!this.head) return undefined
+        let temp = this.head
+        this.head = this.head.next
+        temp.next = null
+        this.length--
+        if(this.length === 0){
+            this.tail = null
+        }
+        temp.next = null
+        return temp
+    }
+
 }
 
-let myLinkedList = new LinkedList(0);
+let myLinkedList = new LinkedList(14);
 console.log('beforePush', myLinkedList)
 
 myLinkedList.push(1);
-myLinkedList.push(2);
-myLinkedList.push(4);
-myLinkedList.push(6);
-myLinkedList.pop(6);
+myLinkedList.push(15);
+myLinkedList.push(12);
+myLinkedList.push(17);
 
-
-myLinkedList.push(2);
-myLinkedList.push(3);
-
-myLinkedList.pop(3)
 console.log('afterPush', myLinkedList)
-
 myLinkedList.shift();
 console.log('AfterShift ', myLinkedList)
 

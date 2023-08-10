@@ -190,11 +190,8 @@ class LinkedList {
 
 let myLinkedList = new LinkedList(14);
 
-myLinkedList.push(1);
-myLinkedList.push(15);
-myLinkedList.push(12);
-myLinkedList.push(17);
 
+<<<<<<< HEAD
 /* console.log('afterPush', myLinkedList)
 // console.log('afterPush2', JSON.stringify(myLinkedList, null, 2));
 myLinkedList.shift();
@@ -209,4 +206,6 @@ myLinkedList.remove(-60) */
 console.log('LinkedList', JSON.stringify(myLinkedList, null, 2));
 myLinkedList.reverse()
 console.log('reverse', JSON.stringify(myLinkedList, null, 2));
+=======
+>>>>>>> 0db8ed3ed61e6da0619135b9c3d299553240a56c
 

@@ -77,12 +77,5 @@ class LinkedList {
 let myLinkedList = new LinkedList(14);
 console.log('beforePush', myLinkedList)
 
-myLinkedList.push(1);
-myLinkedList.push(15);
-myLinkedList.push(12);
-myLinkedList.push(17);
 
-console.log('afterPush', myLinkedList)
-myLinkedList.shift();
-console.log('AfterShift ', myLinkedList)
 
